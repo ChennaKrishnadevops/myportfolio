@@ -1986,3 +1986,170 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+/* =============================================
+   CONTACT SECTION - CUSTOM ENHANCEMENTS
+   ============================================= */
+
+.contact-info {
+  margin-bottom: 3rem !important;
+}
+
+.contact-box {
+  background: white;
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid #e8e8e8;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-box:hover {
+  border-color: #2196F3;
+  box-shadow: 0 12px 35px rgba(33, 150, 243, 0.15);
+  transform: translateY(-8px);
+}
+
+.contact-box .icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  flex-shrink: 0;
+}
+
+.contact-box h3 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.contact-box p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Phone and Email as clickable text - SINGLE LINE FIX */
+.contact-detail-link {
+  color: #2196F3 !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  word-break: break-word;
+  line-height: 1.4;
+  text-decoration: none !important;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease;
+  white-space: normal !important;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.contact-detail-link.email-link {
+  font-size: 0.9rem !important;
+  word-wrap: break-word;
+  padding: 0 0.5rem;
+}
+
+.contact-detail-link:hover {
+  color: #1565C0 !important;
+  text-decoration: underline !important;
+}
+
+/* Regular text for non-clickable items */
+.contact-detail-text {
+  color: #2196F3;
+  font-size: 1.05rem;
+  font-weight: 700;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+/* Social Icons Enhancement */
+.ftco-footer-social {
+  margin-top: 2rem !important;
+}
+
+.ftco-footer-social li {
+  margin: 0 1rem;
+}
+
+.ftco-footer-social li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.ftco-footer-social li a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+}
+
+.ftco-footer-social li a span {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.ftco-footer-social li.normal-txt {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-box {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .contact-detail-link {
+    font-size: 0.85rem !important;
+  }
+
+  .contact-detail-link.email-link {
+    font-size: 0.8rem !important;
+  }
+
+  .contact-box h3 {
+    font-size: 1rem;
+  }
+
+  .contact-box .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-detail-link {
+    font-size: 0.75rem !important;
+  }
+
+  .contact-detail-link.email-link {
+    font-size: 0.7rem !important;
+  }
+}

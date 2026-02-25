@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pullaiah Gari ChennaKrishna Reddy Portfolio</title>
+    <title>PullaiahGari ChennaKrishna Reddy Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -22,9 +22,52 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-
+    <!-- Font Awesome for better icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
+
+/*======================================
+//--//-->   NAVBAR FIX - SINGLE LINE
+======================================*/
+
+.ftco_navbar {
+  padding: 1rem 0 !important;
+}
+
+.navbar-brand {
+  font-size: 1.2rem !important;
+}
+
+.navbar-expand-lg .navbar-nav {
+  flex-direction: row !important;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item {
+  display: inline-block;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    justify-content: flex-end;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important;
+    font-size: 0.85rem;
+  }
+}
 
 /*======================================
 //--//-->   ABOUT
@@ -41,21 +84,23 @@
 
 .about-mf .about-img img {
   margin-left: 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-
 .skill-mf .progress {
-  /* background-color: #cde1f8; */
   margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
+  border-radius: 5px;
   height: .7rem;
+  background: linear-gradient(90deg, #e0e0e0 0%, #f5f5f5 100%);
 }
 
 .skill-mf .progress .progress-bar {
   height: .7rem;
-  background-color: #ffbd39;
+  background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
 }
-
 
 /* Animation styles */
 #typing-animation {
@@ -70,7 +115,6 @@
 
 #typing-animation:before {
   content: "";
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 0;
@@ -97,9 +141,7 @@
   }
 }
 
-
 /* project image zoom effect */
-
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
@@ -109,17 +151,518 @@
   transform: scale(1.1);
 }
 
+/* =============================================
+   CERTIFICATIONS - PROFESSIONAL STYLING
+   ============================================= */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cert-card {
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  color: #2c3e50;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+.cert-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.cert-card:hover::before {
+  left: 100%;
+}
+
+.cert-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.cert-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cert-logo {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f5f7fa;
+}
+
+.cert-logo img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.cert-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  line-height: 1.4;
+}
+
+.cert-card .issued-date {
+  font-size: 0.9rem;
+  color: #667eea;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.cert-card .credential-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.cert-card .credential-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(102, 126, 234, 0.5);
+  text-decoration: none;
+  color: white;
+}
+
+/* =============================================
+   EXPERIENCE - 2x2 GRID LAYOUT
+   ============================================= */
+
+.experience-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resume-wrap {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid #FFD700;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.resume-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+.resume-wrap:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  border-left-color: #667eea;
+}
+
+.resume-wrap .date {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  margin-bottom: 1rem;
+}
+
+.resume-wrap h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Experience Company Badge */
+.experience-company {
+  display: inline-block;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.atos-badge {
+  background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
+}
+
+.techm-badge {
+  background: linear-gradient(135deg, #F44336 0%, #C62828 100%);
+}
+
+.wissen-badge {
+  background: linear-gradient(135deg, #020f61 0%, #030f72 100%);
+}
+
+.resume-wrap ul {
+  margin-top: 1.2rem;
+  padding-left: 1.5rem;
+}
+
+.resume-wrap ul li {
+  margin-bottom: 0.8rem;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.resume-wrap ul li:before {
+  content: '▸';
+  color: #667eea;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5rem;
+  margin-left: -1.5rem;
+}
+
+/* =============================================
+   EDUCATION SECTION - 2 ITEMS
+   ============================================= */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================================
+   TECHNICAL SKILLS MATRIX
+   ============================================= */
+
+.skills-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.skill-item {
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+  border-left-color: #764ba2;
+}
+.skill-item h4 {
+  margin: 0.8rem 	0;
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.skill-category {
+  color: #667eea;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skill-item small {
+  color: #f093fb;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* =============================================
+   SECTION HEADERS
+   ============================================= */
+
+.big-4 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Enhanced underline */
+.underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  margin: 1rem 0 2rem 0;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* =============================================
+   HEADING SECTION
+   ============================================= */
+
+.heading-section {
+  position: relative;
+}
+
+.heading-section h1 {
+  color: #2c3e50;
+}
+
+.heading-section h2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.heading-section p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* =============================================
+   CARD SECTION - ACHIEVEMENTS
+   ============================================= */
+
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 1.5rem;
+  background: white;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.award-name {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.award-date {
+  color: #f093fb;
+  font-weight: 600;
+}
+
+.cars-text {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* =============================================
+   CONTACT SECTION - FULLY VISIBLE CLICKABLE LINKS
+   ============================================= */
+
+.contact-info {
+  margin-bottom: 3rem !important;
+}
+
+.contact-box {
+  background: white;
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid #e8e8e8;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-box:hover {
+  border-color: #2196F3;
+  box-shadow: 0 12px 35px rgba(33, 150, 243, 0.15);
+  transform: translateY(-8px);
+}
+
+.contact-box .icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  flex-shrink: 0;
+}
+
+.contact-box h3 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* CRITICAL FIX: Contact details styling */
+.contact-box p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Phone and Email as clickable text */
+.contact-detail-link {
+  color: #2196F3 !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  word-break: break-word;
+  line-height: 1.5;
+  text-decoration: none !important;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.contact-detail-link:hover {
+  color: #1565C0 !important;
+  text-decoration: underline !important;
+}
+
+/* Regular text for non-clickable items */
+.contact-detail-text {
+  color: #2196F3;
+  font-size: 1.05rem;
+  font-weight: 700;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+/* =============================================
+   SOCIAL ICONS
+   ============================================= */
+
+.ftco-footer-social {
+  margin-top: 2rem !important;
+}
+
+.ftco-footer-social li {
+  margin: 0 1rem;
+}
+
+.ftco-footer-social li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.ftco-footer-social li a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+}
+
+.ftco-footer-social li a span {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.ftco-footer-social li.normal-txt {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
 
 </style>
 
-
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Pullaiah Gari ChennaKrishna Reddy</a>
+	      <a class="navbar-brand" href="index.html">PullaiahGari ChennaKrishna Reddy</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -129,69 +672,55 @@
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#certifications-section" class="nav-link"><span>Certifications</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Achievements</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+
 	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	       <div class="slider-item ">
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-	          	<!-- <div class="one-third js-fullheight order-md-last img" style="background-image:url(bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div> -->
 		          <div class="d-flex align-self-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>ChennaKrishna Reddy</span></h1>
-
-						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
 
 						<script>
-
-						// Initialize the typing animation
 						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
 						const typingTexts = [
 						'Engineer    ',
 						'Youtuber    ',
 						'Mentor    ',
 						];
 
-						// Create a function to display the typing animation for a given text
 						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
 						for (let i = 0; i < text.length; i++) {
 							setTimeout(() => {
 							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
+							}, i * 200);
 						}
 
-						// Once the animation is complete, reset the text and start over
 						setTimeout(() => {
 							typingAnimationElement.textContent = '';
 							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
 						}, text.length * 200);
 						}
 
-						// Start the typing animation loop
 						playTypingAnimation(typingTexts[0]);
-
 						</script>
 
 						<br>
 						<br>
 			            <h2>DevOps Engineer <h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
 			            <p><a href="https://www.youtube.com/@updateraja" class="btn btn-primary py-3 px-4">YouTube</a> 
-							<a href="https://github.com/ChennaKrishnadevops" class="btn btn-white btn-outline-yellow py-3 px-4">GitHub</a></p>
+						<a href="https://github.com/ChennaKrishnadevops" class="btn btn-white btn-outline-yellow py-3 px-4">GitHub</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -204,7 +733,6 @@
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
@@ -217,22 +745,20 @@
 									<!-- Details next to profile image -->
 									<div class="col-sm-5 col-md-10">
 									  <div class="about-info">
-										<!-- <p><span class="title-s">Name: </span> <span>ChennaKrishna Reddy</span></p>
-										<p><span class="title-s">Job Role: </span> <span>DevOps Engineer</span></p> -->
-										<br><p><span class="title-s">Experience: </span> <span>5 Years 7 Months</span></p>
+										<br><p><span class="title-s">Experience: </span> <span>6.5+ Years</span></p>
 										<p><span class="title-s">Profile: </span> <span>DevOps & Cloud</span></p>
 										<p><span class="title-s">Domain: </span> <span>Retail, Ecommerce & Telecom</span></p>
-										<p><span class="title-s">Education: </span> <span>Bachelor of Engineering</span></p>
+										<p><span class="title-s">Education: </span> <span>Master of Technology</span></p>
 										<p><span class="title-s">Languages: </span> <span>English, Telugu, Hindi &amp; Kannada</span></p>
 										<p><span class="title-s">Intrest: </span> <span>Traveling, Nature Photography</span></p>
-										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
+										<p><span class="title-s">Address: </span> <span>Hyderabad, India</span></p>
 
 									  </div>
 									</div>
 								  </div>
 
 								<div class="skill-mf">
-									<p class="title-s">Skills</p>
+									<p class="title-s">Top Skills</p>
 									<span>DevOps</span> <span class="pull-right">95%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
@@ -258,26 +784,23 @@
 					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate">
-								
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>DevOps professional with 5+ years of experience in designing and implementing automated CI/CD pipelines, reducing deployment time by 60% and increasing fully deployment frequency by 75%. Skilled in monitoring and alerting systems, and implementing security policies and procedures. Proven track record in increasing system reliability by 30%, and improving system efficiency by 40%.</p>
+								<p>DevOps professional with 6.5+ years of experience in designing and implementing automated CI/CD pipelines, reducing deployment time by 60% and increasing fully deployment frequency by 75%. Skilled in monitoring and alerting systems, and implementing security policies and procedures. Proven track record in increasing system reliability by 30%, and improving system efficiency by 40%.</p>
 								<ul class="about-info mt-5 px-md-0 px-2">
-									<li class="d-flex"><span>SCM Tools:</span> <span>Git, GitHub, GitLab & SVN</span></li>
+									<li class="d-flex"><span>SCM Tools:</span> <span>Git, GitHub, GitLab</span></li>
 									<li class="d-flex"><span>Build Tools:</span> <span>Maven & npm</span></li>
-									<li class="d-flex"><span>CI Tools:</span> <span>Jenkins & GitHub actions</span></li>
+									<li class="d-flex"><span>CI Tools:</span> <span>Jenkins & GitHub actions, AWS Code pipelines</span></li>
 									<li class="d-flex"><span>Security Tools:</span> <span>HP Fortify, Qualys, NexusIQ & Sonarqube</span></li>
 									<li class="d-flex"><span>Deployment:</span> <span>IBM Udeploy</span></li>
 									<li class="d-flex"><span>Monitoring:</span> <span>Splunk & AppDynamics</span></li>
 									<li class="d-flex"><span>Container Tools:</span> <span>Kubernetes & Docker</span></li>
-									<li class="d-flex"><span>Cloud:</span> <span>Cloud Foundry (PaaS) & AWS</span></li>
+									<li class="d-flex"><span>Cloud:</span> <span>Cloud Foundry (PaaS), AWS & Azure</span></li>
 									<li class="d-flex"><span>IaC Tools:</span> <span>Terraform, Ansible</span></li>
-									
 								</ul>
 							</div>
 						</div>
-
 
 						<div class="counter-wrap ftco-animate d-flex mt-md-3">
 							<div class="text">
@@ -293,12 +816,12 @@
     <section class="ftco-section ftco-no-pb" id="resume-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>DevOps Engineer with specializing in the development and implementation of CI/CD pipeline toolings and iterative improvement in fast-paced environments. Known for improving efficiency and productivity through innovative solutions and strong collaboration skills. Passionate about digital transformation and eager to utilize my experience to make a positive impact.</p>
-          </div>
-        </div>
+              <div class="col-md-10 heading-section text-center ftco-animate">
+              	<h1 class="big big-2">Resume</h1>
+                <h2 class="mb-4">Professional Experience & Education</h2>
+                <p>DevOps Engineer specializing in the development and implementation of CI/CD pipeline toolings and iterative improvement in fast-paced environments. Known for improving efficiency and productivity through innovative solutions and strong collaboration skills.</p>
+              </div>
+            </div>
 
 		<div class="row">
 			<h1 class="big-4">Experience</h1>
@@ -306,43 +829,61 @@
 		</div>
 		<br>
 		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2021-Present</span>
-						<h2>Sr DevOps Engineer</h2>
-						<span style="color:DodgerBlue;" class="position">ATOS</span>
-							<ul>
-								<li>Created and Maintained automated CI/CD/CT pipeline in Jenkins to achieve build, deploy and test in single piepline from test level to production.</li>
-								<li>Jenkins shared library has been implemented for 40 applications which will trigger on every commit and also reduces manual effort of build by 25%.</li>
-								<li>Created and Maintained Spotfire, Splunk and AppDynamics dashboard for tracking application related data and performance metrics for test & production levels.</li>
-								<li>Migrated more than 120 repositories from GitLab to GitHub and provided demo to the Development team to adopt the GitHub.</li>
-								<li>Configured Release pipeline on Cloudbees Flow release automation tool which reduces manual efforts of various teams.</li>
-								<li>Implemented Blue-Green deployment strategy for 40 applications to achieve zero down time.</li>
-								<li>Created automated shell scripts to collect server info, running processes.</li>
-							</ul>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2019-2021</span>
-						<h2>DevOps Engineer</h2>
-						<span style="color:Tomato;" class="position">Tech Mahindra</span>
-							<ul>
-								<li>Closely worked on SDLC process to understand the clear requirements and deliverables and created freestyle jobs for the build and deployment using github, maven and Jenkins.</li>
-								<li>Implemented SonarQube for code quality and Nexus repository for artifact storage and integrated them into Jenkins to achieve Continuous Integration and continuous deployment.</li>
-								<li>Worked on AWS services such as Setting up new server (EC2) instances/services in AWS, configuring security groups, and setting up Elastic IP's, auto-scaling configuration, and Cloud Formation.</li>
-								<li>Supported development team to build and release applications to production in seamless manner without any pipleine issue.</li>
-								<li>Created docker images from docker files and also configured docker containers with the images and pushed to the docker repsotory.</li>
-								<li>Integrated SonarQube and HP Fortify for code quality and security testing.</li>
-							</ul>
-					</div>
-
-				</div>
-
+		<div class="experience-section">
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2024-Present</span>
+				<h2>Senior Software Engineer</h2>
+				<span class="experience-company wissen-badge">Wissen Infotech | Hyderabad, India</span>
+				<ul>
+					<li>Created and implemented automated CI/CD pipelines using AWS Code Pipeline and CDK for multi-environment deployments.</li>
+					<li>Implemented pipeline notifications to Microsoft Teams for real-time deployment status updates.</li>
+					<li>Deployed containerized applications on AWS ECS Fargate with optimized CPU and memory configurations.</li>
+					<li>Implemented ECS service auto-scaling policies using CloudWatch metrics with configurable capacity limits.</li>
+					<li>Designed multi-region network architecture supporting deployments across 11+ AWS regions.</li>
+					<li>Configured IAM roles and policies with fine-grained permissions for ECS tasks accessing AWS services.</li>
+				</ul>
 			</div>
+
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2023-2024</span>
+				<h2>Consultant</h2>
+				<span class="experience-company atos-badge">ATOS | Bengaluru, India</span>
+				<ul>
+					<li>Created and Maintained automated CI/CD/CT pipeline in Jenkins to achieve build, deploy and test in single pipeline from test level to production.</li>
+					<li>Jenkins shared library has been implemented for 40+ applications which will trigger on every commit and also reduces manual effort of build by 25%.</li>
+					<li>Configured Release pipeline on Cloudbees Flow release automation tool which reduces manual efforts of various teams.</li>
+					<li>Implemented Blue-Green deployment strategy for 40 applications to achieve zero downtime.</li>
+					<li>Supported quarterly patching and upgrade activities for Linux, Java, and WebLogic, while creating and integrating automated log4j vulnerability scans into the main release pipeline.</li>
+				</ul>
+			</div>
+
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2021-2023</span>
+				<h2>Associate Consultant</h2>
+				<span class="experience-company atos-badge">ATOS | Bengaluru, India</span>
+				<ul>
+					<li>Created and Maintained Spotfire, Splunk and AppDynamics dashboard for tracking application related data and performance metrics for test & production levels.</li>
+					<li>Migrated more than 120 repositories from GitLab to GitHub and provided demo to the Development team to adopt the GitHub.</li>
+					<li>Created automated shell scripts to collect server info, running processes and resource utilization.</li>
+					<li>Supported development teams in migrating and decommissioning legacy applications, while implementing SAST and DAST scans to validate source code, APIs, and web services across all applications.</li>
+					<li>Supported development team in CI/CD pipeline optimization and deployment automation.</li>
+					<li>Supported development team in CI/CD pipeline optimization and deployment automation.</li>
+				</ul>
+			</div>
+
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2018-2020</span>
+				<h2>Site Reliability Engineer</h2>
+				<span class="experience-company techm-badge">Tech Mahindra | Bengaluru, India</span>
+				<ul>
+					<li>Closely worked on SDLC process to understand the clear requirements and deliverables and created freestyle jobs for the build and deployment using GitHub, Maven and Jenkins.</li>
+					<li>Implemented SonarQube for code quality and Nexus repository for artifact storage and integrated them into Jenkins to achieve Continuous Integration and deployment.</li>
+					<li>Worked on AWS services such as setting up new server (EC2) instances/services in AWS, configuring security groups, and setting up Elastic IP's and auto-scaling configuration.</li>
+					<li>Created docker images from dockerfiles and also configured docker containers with the images and pushed to the docker repository.</li>
+					<li>Worked extensively on AWS services including EC2, S3, RDS, ECS, Route 53, ELB, Cloud Watch, Cloud Trail, IAM, and Auto Scaling.</li>
+				</ul>
+			</div>
+		</div>
 
 		<br>
 		<br>
@@ -353,38 +894,168 @@
 		</div>
 		<br>
 		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2013-2017</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">Jawaharlal Nehru Technological University</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-    			</div>
+		<div class="education-grid">
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2018-2020</span>
+				<h2>Master of Technology</h2>
+				<span class="position">Jawaharlal Nehru Technological University, Anantapur</span>
+				<p class="mt-4">Grade: First Class with Distinction <br> Major: Power Electronics</p>
+			</div>
 
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2011-2013</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">Vani Jr College</span>
-    					<p class="mt-4">Grade: First class.</p>
-    				</div>
-				</div>
-    		</div>
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2013-2017</span>
+				<h2>Bachelor of Engineering</h2>
+				<span class="position">Jawaharlal Nehru Technological University, Anantapur</span>
+				<p class="mt-4">Grade: First Class with Distinction <br> Major: Electrical and Electronics Engineering</p>
+			</div>
+		</div>
 
     	</div>
     </section>
 
-   
+    <!-- ===================================
+         CERTIFICATIONS SECTION
+         =================================== -->
+    <section class="ftco-section ftco-no-pb" id="certifications-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+              <div class="col-md-10 heading-section text-center ftco-animate">
+              	<h1 class="big big-2">Certifications</h1>
+                <h2 class="mb-4">Professional Certifications & Courses</h2>
+                <p>Continuously learning and updating professional skills with industry-recognized certifications and courses in cloud, DevOps, and agile methodologies.</p>
+              </div>
+            </div>
 
+		<div class="cert-grid">
+			<!-- Microsoft Azure -->
+			<div class="cert-card ftco-animate">
+				<div class="cert-logo">
+					<img src="images/microsoft.png" alt="Microsoft Logo">
+				</div>
+				<h3>Microsoft Azure Fundamentals AZ-900</h3>
+				<p class="issued-date">Issued on: May 2025</p>
+				<a href="https://learn.microsoft.com/en-us/users/pullaiahgarichennakrishnareddy-2831/credentials/f2b62f4e335219e5?ref=https%3A%2F%2Fwww.linkedin.com%2F" class="credential-link" target="_blank">Show Credential</a>
+			</div>
+
+			<!-- Udemy DevOps -->
+			<div class="cert-card ftco-animate">
+				<div class="cert-logo">
+					<img src="images/udemy.png" alt="Udemy Logo">
+				</div>
+				<h3>Ultimate DevOps Project Implementation</h3>
+				<p class="issued-date">Issued on: May 2025</p>
+				<a href="https://www.udemy.com/certificate/UC-653e3239-dbb1-4dea-9a99-c0842212019b/" class="credential-link" target="_blank">Show Credential</a>
+			</div>
+
+			<!-- Coursera Agile -->
+			<div class="cert-card ftco-animate">
+				<div class="cert-logo">
+					<img src="images/coursera.png" alt="Coursera Logo">
+				</div>
+				<h3>Introduction to Agile Development and Scrum</h3>
+				<p class="issued-date">Issued on: June 2024</p>
+				<a href="https://www.coursera.org/account/accomplishments/verify/ZQN4UXMJBRT7" class="credential-link" target="_blank">Show Credential</a>
+			</div>
+
+			<!-- LinkedIn Learning Docker -->
+			<div class="cert-card ftco-animate">
+				<div class="cert-logo">
+					<img src="images/linkedin.png" alt="LinkedIn Logo">
+				</div>
+				<h3>Learning Docker</h3>
+				<p class="issued-date">Issued on: April 2024</p>
+				<a href="https://www.linkedin.com/learning/certificates/a34becbb98db6fccc263c132d4e31d4307d37da35c206782ac2b5d3fc50d6d47?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BkC3N8LxuQtqzZSO09vcLZg%3D%3D" class="credential-link" target="_blank">Show Credential</a>
+			</div>
+		</div>
+
+		<!-- Technical Skills Matrix -->
+		<div class="row mt-5">
+			<div class="col-md-12">
+				<h3 class="mb-4" style="color: #2c3e50; font-weight: 700; font-size: 1.8rem;">Technical Skills Matrix</h3>
+				<div class="underline"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="skills-matrix">
+					<div class="skill-item">
+						<div class="skill-category">CI/CD</div>
+						<h4>Jenkins</h4>
+						<small>Expert</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">CI/CD</div>
+						<h4>GitHub Actions</h4>
+						<small>Advanced</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">Container</div>
+						<h4>Docker</h4>
+						<small>Expert</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">Orchestration</div>
+						<h4>Kubernetes</h4>
+						<small>Advanced</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">Cloud</div>
+						<h4>AWS</h4>
+						<small>Advanced</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">Cloud</div>
+						<h4>Azure</h4>
+						<small>Intermediate</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">IaC</div>
+						<h4>Terraform</h4>
+						<small>Advanced</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">IaC</div>
+						<h4>Ansible</h4>
+						<small>Advanced</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">Monitoring</div>
+						<h4>Splunk</h4>
+						<small>Advanced</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">Monitoring</div>
+						<h4>AppDynamics</h4>
+						<small>Advanced</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">SCM</div>
+						<h4>Git/GitHub</h4>
+						<small>Expert</small>
+					</div>
+					<div class="skill-item">
+						<div class="skill-category">Scripting</div>
+						<h4>Bash/Shell</h4>
+						<small>Expert</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    	</div>
+    </section>
+
+    <!-- ===================================
+         ACHIEVEMENTS SECTION
+         =================================== -->
     <section class="ftco-section" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Achievements</h1>
-            <h2 class="mb-4">Achievements</h2>
-            <!-- <p>Below are the few of the achievments and awards</p> -->
+            <h2 class="mb-4">Awards & Recognition</h2>
+            <p>Recognition for outstanding performance, innovation, and dedication throughout my professional journey.</p>
           </div>
         </div>
 		 <div class="row d-flex">
@@ -392,14 +1063,12 @@
 				<article class="card shadow">
 				  <img class="rounded card-img-top" src="images/spot.png" alt="post-thumb">
 				  <div class="card-body">
-					<h4 class="card-title"><a class="text-dark">SPOT AWARD - Dec 2021</a>
-					</h4>
-					<p class="cars-text">Received Spot award for dedicated contribution and extrordinary support for mulitple releases in Log4j2 vulnarability fix.</p>
+					<h4 class="card-title"><span class="award-name">🏆 SPOT AWARD</span> <span class="award-date">Dec 2021</span></h4>
+					<p class="cars-text">Received Spot award for dedicated contribution and extraordinary support for multiple releases in Log4j2 vulnerability fix.</p>
 				  </div>
 				  <div class="card-body">
-					<h4 class="card-title"><a class="text-dark">SPOT AWARD - Jun 2022</a>
-					</h4>
-					<p class="cars-text">Received Spot award for dedicated contribution and extrordinary support throughout PI02 and making PI03 event successsfull .</p>
+					<h4 class="card-title"><span class="award-name">🏆 SPOT AWARD</span> <span class="award-date">Jun 2022</span></h4>
+					<p class="cars-text">Received Spot award for dedicated contribution and extraordinary support throughout PI02 and making PI03 event successful.</p>
 				  </div>
 				</article>
 			  </div>	
@@ -407,8 +1076,7 @@
 			<article class="card shadow">
 			  <img class="rounded card-img-top" src="images/img.jpg" alt="post-thumb">
 			  <div class="card-body">
-				<h4 class="card-title"><a class="text-dark">TO INFINITY & BEYOND - May 2023</a>
-				</h4><br>
+				<h4 class="card-title" style="white-space: normal;"><span class="award-name">🎯 TO INFINITY & BEYOND</span> <span class="award-date">May 2023</span></h4>
 				<p class="cars-text">Recognized and Awarded by our client for going the extra mile, overcoming challenges, proposing innovative solutions, and wholeheartedly embracing the journey.</p>
 			  </div>
 			</article>
@@ -417,94 +1085,87 @@
 			<article class="card shadow">
 			  <img class="rounded card-img-top" src="images/spot.png" alt="post-thumb">
 			  <div class="card-body">
-				<h4 class="card-title"><a class="text-dark">SPOT AWARD - Nov 2023</a>
-				</h4>
-				<p class="cars-text">Received Spot award for extrordinary DevSecOps presentation and demo to the client on floor visit.</p>
+				<h4 class="card-title"><span class="award-name">🏆 SPOT AWARD</span> <span class="award-date">Nov 2023</span></h4>
+				<p class="cars-text">Received Spot award for extraordinary DevSecOps presentation and demo to the client on floor visit.</p>
 			  </div>
-			  <div class="card-body">
-				<h4 class="card-title"><a class="text-dark">SPOT AWARD - Apr 2024</a>
-				</h4>
-				<p class="cars-text">Received Spot award for Guiding and supporting other team to proceed and complete PCF & IAAS deployment and to implement Bluegreen deployment in LP.</p>
-			  </div>
+				  <div class="card-body">
+					<h4 class="card-title"><span class="award-name">🏆 SPOT AWARD</span> <span class="award-date">Apr 2024</span></h4>
+					<p class="cars-text">Received Spot award for Guiding and supporting other team to proceed and complete PCF & IAAS deployment and to implement Blue-green deployment in LP.</p>
+				  </div>
 			</article>
 		  </div>
 		</div>
 	</div>
     </section>
 
+    <!-- ===================================
+         CONTACT SECTION - FULLY VISIBLE
+         =================================== -->
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+            <h2 class="mb-4">Get In Touch</h2>
+            <p>Below are the available options to reach out to me!</p>
           </div>
         </div>
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
+          	<div class="contact-box">
+          		<div class="icon">
+          			<i class="fas fa-map-marker-alt"></i>
           		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Bengaluru, India</p>
-	          </div>
+          		<h3>Address</h3>
+          		<div class="contact-detail-text">Hyderabad, India</div>
+          	</div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
+          	<div class="contact-box">
+          		<div class="icon">
+          			<i class="fas fa-phone-alt"></i>
           		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://+919620241535">+91 9620241535</a></p>
-	          </div>
+          		<h3>Phone</h3>
+          		<a href="tel:+919491988605" class="contact-detail-link">+91 9620241535</a>
+          	</div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
+          	<div class="contact-box">
+          		<div class="icon">
+          			<i class="fas fa-envelope"></i>
           		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:chennakrishna.devops17@gmail.com">chennakrishna.devops17@gmail.com</a></p>
-	          </div>
+          		<h3>Email</h3>
+          		<a href="mailto:chennakrishna.devops17@gmail.com" class="contact-detail-link">chennakrishna.devops17@gmail.com</a>
+          	</div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
+          	<div class="contact-box">
+          		<div class="icon">
+          			<i class="fas fa-file-alt"></i>
           		</div>
-          		<h3 class="mb-4">View Resume</h3>
-	            <p><a href="#resume-section">View Resume</a></p>
-	          </div>
+          		<h3>Resume</h3>
+          		<a href="#resume-section" class="contact-detail-link">View Resume</a>
+          	</div>
           </div>
+        </div>
 
 		  <div class="container">
-			<!-- <br>
-			<br> -->
-			<!-- <div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div> -->
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.youtube.com/@updateraja"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/chennakrishna-reddy-pullaiahgari"><span class="icon-linkedin"></span></a></li>  
-					  <!-- <li class="ftco-animate"><a href="https://twitter.com/krishna0204"><span class="icon-twitter"></span></a></li> -->
-					  <li class="ftco-animate"><a href="https://facebook.com/Chennakrishna0204"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/chennakrishna_reddy_cr"><span class="icon-instagram"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@updateraja" target="_blank"><i class="fab fa-youtube"></i></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/chennakrishna-reddy-pullaiahgari" target="_blank"><i class="fab fa-linkedin"></i></a></li>  
+					  <li class="ftco-animate"><a href="https://facebook.com/Chennakrishna0204" target="_blank"><i class="fab fa-facebook"></i></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/chennakrishna_reddy_cr" target="_blank"><i class="fab fa-instagram"></i></a></li>
 					</ul>
 				<br>
 		   </div>
-   </div>
+    </div>
  </section>
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
